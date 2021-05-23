@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -43,8 +44,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        app:layout_constraintStart_toStartOf="@+id/main_Contanier"
+        app:layout_constraintBottom_toBottomOf="@id/main_Contanier"
+        app:layout_constraintEnd_toEndOf="@+id/main_Contanier"
+
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/main_Contanier"
         app:srcCompat="@drawable/ic_launcher_background" />
 
@@ -63,8 +66,8 @@
         android:id="@+id/play_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:alpha="0"
         android:layout_marginEnd="24dp"
+        android:alpha="0"
         app:layout_constraintBottom_toBottomOf="@+id/close_imageView"
         app:layout_constraintEnd_toStartOf="@+id/close_imageView"
         app:layout_constraintTop_toTopOf="@+id/close_imageView"
@@ -79,9 +82,9 @@
         android:alpha="0"
         android:ellipsize="end"
         android:maxLines="1"
-        android:text="Text View"
+        android:text="זה טקסט ארוך ארוך שאין בו סופים מעין התחלה ואמצע שאינו מוגדר בצורה ובצליל "
         app:layout_constraintBottom_toBottomOf="@+id/play_imageView"
         app:layout_constraintEnd_toStartOf="@+id/play_imageView"
         app:layout_constraintStart_toEndOf="@+id/main_ImageView"
         app:layout_constraintTop_toTopOf="@+id/play_imageView" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
